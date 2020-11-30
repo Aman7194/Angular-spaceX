@@ -1,0 +1,170 @@
+<p>Flights</p>
+<div class="section">
+<div class="col-xs-12">
+  <p><u>Launch Year</u></p>
+<div class="row">
+<div class="column">
+  <button #btn1 class="btn btn-success" type="button" (click)="OnYear(btn1)">2006</button>
+</div>
+<div class="column">
+  <button #btn2 class="btn btn-success" type="button" (click)="OnYear(btn2)">2007</button>
+</div>
+</div>
+<div class="row">
+  <div class="column">
+  <button #btn3 class="btn btn-success" type="button" (click)="OnYear(btn3)">2008</button>
+</div>
+<div class="column">
+  <button #btn4 class="btn btn-success" type="button" (click)="OnYear(btn4)">2009</button>
+</div>
+</div>
+<div class="row">
+  <div class="column">
+  <button #btn5 class="btn btn-success" type="button"(click)="OnYear(btn5)">2010</button>
+</div>
+<div class="column">
+  <button #btn6 class="btn btn-success" type="button" (click)="OnYear(btn6)">2011</button>
+</div>
+</div>
+<div class="row">
+  <div class="column">
+  <button #btn7 class="btn btn-success" type="button" (click)="OnYear(btn7)">2012</button>
+</div>
+<div class="column">
+  <button #btn8 class="btn btn-success" type="button" (click)="OnYear(btn8)">2013</button>
+</div>
+</div>
+<div class="row">
+  <div class="column">
+  <button #btn9 class="btn btn-success" type="button" (click)="OnYear(btn9)">2014</button>
+</div>
+<div class="column">
+  <button #btn10 class="btn btn-success" type="button" (click)="OnYear(btn10)">2015</button>
+</div>
+</div>
+<div class="row">
+  <div class="column">
+  <button #btn11 class="btn btn-success" type="button" (click)="OnYear(btn11)">2016</button>
+</div>
+<div class="column">
+  <button #btn12 class="btn btn-success" type="button" (click)="OnYear(btn12)">2017</button>
+</div>
+</div>
+<div class="row">
+  <div class="column">
+  <button #btn13 class="btn btn-success" type="button" (click)="OnYear(btn13)">2018</button>
+</div>
+<div class="column">
+  <button #btn14 class="btn btn-success" type="button" (click)="OnYear(btn14)">2019</button>
+</div>
+</div>
+<div class="row">
+  <div class="column">
+    
+  <button #btn15 class="btn btn-success" type="button" (click)="OnYear(btn15)">2020</button>
+</div>
+
+</div>
+
+<br>
+
+<p><u>Successful Launch</u></p>
+<div class="row">
+  <div class="column">
+  <button class="btn btn-success" type="button" (click)="OnSuccess()">True</button>
+</div>
+<div class="column">
+  <button class="btn btn-success" type="button">False</button>
+</div>
+</div>
+<br>
+<p><u>Successful Landing</u></p>
+<div class="row">
+  <div class="column">
+  <button class="btn btn-success" type="button" (click)="OnLand()">True</button>
+</div>
+<div class="column">
+  <button class="btn btn-success" type="button">False</button>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="section" style="margin: 0% 80% 0% 0%;" id="image_container">
+<div fxLayout="row" fxLayout.xs="column"  fxLayoutWrap="wrap"  >  
+  <div *ngFor="let launch of launches1">
+     <div *ngFor="let launchs of launch">
+  
+      <mat-card  style="
+       border: 3px solid grey;
+       ">
+        <img
+          height="200"
+          width="150"
+          mat-card-image
+          [src]="launchs.links.mission_patch"  
+        >
+        <mat-card-content>
+          <p>Mission Id:{{ launchs.mission_name }}</p>
+          <p>Launch Year:{{ launchs.launch_year }}</p>
+          <p>Launch Success:{{ launchs.launch_success }}</p>
+        </mat-card-content>
+      </mat-card>
+    
+    </div>
+    </div>
+    </div>
+  </div>
+  <div class="section" style="margin: 0% 80% 0% 0%;">
+    <div fxLayout="row" fxLayout.xs="column"  fxLayoutWrap="wrap"  >  
+      <div *ngFor="let launch of launches2">
+         <div *ngFor="let launchs1 of launch">
+      
+          <mat-card  style="
+           border: 3px solid grey;
+           ">
+            <img
+              height="200"
+              width="150"
+              mat-card-image
+              [src]="launchs1.links.mission_patch"  
+            >
+            <mat-card-content>
+              <p>Mission Id:{{ launchs1.mission_name }}</p>
+              <p>Launch Year:{{ launchs1.launch_year }}</p>
+              <p>Launch Success:{{ launchs1.launch_success }}</p>
+            </mat-card-content>
+          </mat-card>
+        
+        </div>
+        </div>
+        </div>
+      </div>
+  <div class="section" style="margin: 0% 50% 0% 20%;">
+    <div fxLayout="row" fxLayout.xs="column"  fxLayoutWrap="wrap"  > 
+<div *ngFor="let launch of launches">
+  <div *ngFor="let launchs of launch">
+  <!-- <div *ngIf="launchs.launch_year===btnvalue+''">  -->
+   <mat-card  style="
+    border: 3px solid grey;
+    ">
+     <img
+       height="200"
+       width="150"
+       mat-card-image
+       [src]="launchs.links.mission_patch"  
+     >
+     <!-- <mat-card-header>
+       <mat-card-title>{{ launchs.links.mission_patch }}</mat-card-title>
+     </mat-card-header> -->
+     <mat-card-content>
+       <p>Mission Id:{{ launchs.mission_name }}</p>
+       <p>Launch Year:{{ launchs.launch_year }}</p>
+     </mat-card-content>
+   </mat-card>
+ <!-- </div>  -->
+ </div>
+ </div>
+    </div>
+  </div>
+  <br>
